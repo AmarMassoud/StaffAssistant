@@ -1,0 +1,8 @@
+name: StaffChat
+version: 1.0.0
+main: me.amar.staffchat.StaffChat
+api-version: 1.13
+commands:
+  staffchat:
+    description: sends a message to staffchat.
+    aliases: [sc]
