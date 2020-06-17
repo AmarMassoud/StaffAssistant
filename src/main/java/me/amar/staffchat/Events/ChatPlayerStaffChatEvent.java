@@ -17,7 +17,7 @@ public class ChatPlayerStaffChatEvent implements Listener {
         if(StaffChatToggle.isPlayerInStaffChat(p.getUniqueId().toString())) {
             e.setCancelled(true);
             for(Player staff : Bukkit.getOnlinePlayers()) {
-                if(staff.hasPermission("staff.see")) {
+                if(staff.hasPermission("adminchat.see")) {
                     staff.sendMessage(StaffChat.colorize("&7[&cStaffChat&7] - " + p.getDisplayName() + " >> &a" + m));
                 }
             }
@@ -26,7 +26,7 @@ public class ChatPlayerStaffChatEvent implements Listener {
         if(AdminChatToggle.isPlayerInAdminChat(p.getUniqueId().toString())) {
             e.setCancelled(true);
             for(Player staff : Bukkit.getOnlinePlayers()) {
-                if(staff.hasPermission("staff.see")) {
+                if(staff.hasPermission("adminchat.see")) {
                     staff.sendMessage(StaffChat.colorize("&7[&cStaffChat&7] - " + p.getDisplayName() + " >> &a" + m));
                 }
             }
